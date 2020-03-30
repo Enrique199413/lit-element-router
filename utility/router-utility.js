@@ -6,7 +6,7 @@ export function stripExtraTrailingSlash(str) {
 }
 
 export function parseQuery(querystring) {
-    return querystring ? JSON.parse('{"' + querystring.substring(1).replace(/&/g, '","').replace(/=/g, '":"') + '"}') : {}
+    return {};
 }
 
 export function parseParams(pattern, uri) {
