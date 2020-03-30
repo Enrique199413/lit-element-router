@@ -44,7 +44,7 @@ export function router(base) {
 
             let notFoundRoute = routes.filter(route => route.pattern === '*')[0];
             let activeRoute = routes.filter(route => route.pattern !== '*' && testRoute(uri, route.pattern))[0];
-            let query = parseQuery(querystring);
+            let query = {};
 
             if (activeRoute) {
                 activeRoute.params = parseParams(activeRoute.pattern, uri);
